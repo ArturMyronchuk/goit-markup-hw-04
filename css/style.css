@@ -11,7 +11,6 @@ body {
   color: var(--primary-tex-color);
   margin: 0;
 }
-
 *,
 ::after,
 ::before {
@@ -131,11 +130,22 @@ address {
 /* Section main */
 
 .section-main {
+  max-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #2e2f42;
   box-sizing: border-box;
   padding-top: 188px;
   padding-bottom: 188px;
-  text-align: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/main-img-new.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .container-text {
   width: 496px;
@@ -178,7 +188,27 @@ address {
   display: flex;
   gap: 24px;
 }
-
+.info-item::before {
+  content: "";
+  height: 112px;
+  background-color: #f4f4fd;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 8px;
+}
+.info-item:nth-child(1)::before {
+  background-image: url(../images/icons.svg/strategy.svg);
+}
+.info-item:nth-child(2)::before {
+  background-image: url(../images/icons.svg/punctuality.svg);
+}
+.info-item:nth-child(3)::before {
+  background-image: url(../images/icons.svg/diligence.svg);
+}
+.info-item:nth-child(4)::before {
+  background-image: url(../images/icons.svg/technologies.svg);
+}
 .info-text {
   font-weight: 500;
   font-size: 20px;
@@ -254,7 +284,51 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--title-tex-color);
-  padding-bottom: 32px;
+}
+.team-list-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+.team-item-social {
+  height: 40px;
+  width: 40px;
+}
+.team-img-social {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(77, 90, 229, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-icons-social {
+  fill: #e7e9fc;
+}
+
+/* -------customers---------- */
+.customers-text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--primary-tex-color);
+}
+.company-list {
+  display: flex;
+  gap: 24px;
+}
+.company-item {
+  width: 168px;
+  height: 88px;
+  border: 1px solid rgba(142, 143, 153, 1);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* ------footer------ */
