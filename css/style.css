@@ -358,7 +358,9 @@ address {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
+}
+.footer-logo-cont {
+  margin-right: 120px;
 }
 .footer-text {
   font-size: 16px;
