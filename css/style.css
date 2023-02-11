@@ -108,7 +108,9 @@ address {
 .header-item:hover,
 .header-item:focus,
 .address-info:hover,
-.address-info:focus {
+.address-info:focus,
+.phone:hover,
+.phone:focus {
   color: var(--color-hover);
 }
 .address {
@@ -131,7 +133,6 @@ address {
 
 .section-main {
   max-width: 1440px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2e2f42;
@@ -188,16 +189,15 @@ address {
   display: flex;
   gap: 24px;
 }
-.info-item::before {
-  content: "";
+.info-img {
   height: 112px;
   background-color: #f4f4fd;
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 8px;
 }
-.info-item:nth-child(1)::before {
+/* .info-item:nth-child(1)::before {
   background-image: url(../images/icons.svg/strategy.svg);
 }
 .info-item:nth-child(2)::before {
@@ -208,7 +208,7 @@ address {
 }
 .info-item:nth-child(4)::before {
   background-image: url(../images/icons.svg/technologies.svg);
-}
+} */
 .info-text {
   font-weight: 500;
   font-size: 20px;
@@ -259,6 +259,7 @@ address {
   width: 264px;
   text-align: center;
   background: #ffffff;
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -446,34 +447,41 @@ address {
 
 /* ------portfolio-info------ */
 .portfolio-info-list {
-  background: #ffffff;
+  background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.portfolio-info-item:hover,
-.portfolio-info-item:focus {
+.portfolio-link-img {
+  display: block;
+}
+.portfolio-link-img:focus,
+.portfolio-link-img:hover {
   cursor: pointer;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-img-text {
-  border: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
-.portfolio-img-text:focus,
+/* .portfolio-img-text:focus,
 .portfolio-img-text:hover {
   border: 0.5px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+  } */
 
 .portfolio-info-tex {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: inherit;
   padding-top: 32px;
   margin-bottom: 8px;
   padding-left: 16px;
+  color: var(--primary-tex-color);
 }
 .portfolio-info-desc {
   font-size: 16px;
